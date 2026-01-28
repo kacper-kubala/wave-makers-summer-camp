@@ -363,7 +363,7 @@ export default function Home() {
     },
   ]
 
-  const campStartDate = new Date("2025-07-08T00:00:00")
+  const campStartDate = new Date("2026-07-12T00:00:00")
 
   // Dane galerii
   const galleryImages = [
@@ -667,7 +667,7 @@ export default function Home() {
                   transition={{ duration: 0.5 }}
                   className="inline-block bg-blue-600/80 backdrop-blur-sm px-4 py-1 rounded-full mb-4"
                 >
-                  <span className="text-white font-medium">Lato 2025</span>
+                  <span className="text-white font-medium">Lato 2026</span>
                 </motion.div>
 
                 <motion.h1
@@ -824,7 +824,7 @@ export default function Home() {
                 }}
               >
                 <div className="bg-blue-600 text-white p-4">
-                  <h3 className="text-xl font-bold">WaveMakers Summer Camp 2025</h3>
+                  <h3 className="text-xl font-bold">WaveMakers Summer Camp 2026</h3>
                   <p className="text-sm text-blue-100">Wakacyjna przygoda pełna ruchu!</p>
                 </div>
 
@@ -836,7 +836,7 @@ export default function Home() {
                       </div>
                       <div>
                         <h4 className="font-bold text-blue-800">Termin</h4>
-                        <p className="text-gray-700 font-medium">8-18 lipca 2025r.</p>
+                        <p className="text-gray-700 font-medium">12-22 lipca 2026r.</p>
                         <p className="text-xs text-gray-500 mt-1">10 dni niezapomnianych przygód</p>
                       </div>
                     </div>
@@ -866,7 +866,7 @@ export default function Home() {
                   <div className="mt-6 bg-blue-50 p-4 rounded-lg border border-blue-200">
                     <div className="flex items-center gap-2 mb-2">
                       <Award className="h-5 w-5 text-blue-600" aria-hidden="true" />
-                      <p className="text-blue-800 font-semibold">Cena: 2900 zł</p>
+                      <p className="text-blue-800 font-semibold">Cena: 3200 zł</p>
                     </div>
                     <p className="text-xs text-gray-600 mb-3 ml-7">
                       W cenie: zakwaterowanie, wyżywienie, opieka, wszystkie atrakcje
@@ -898,7 +898,7 @@ export default function Home() {
               <motion.div className="space-y-4 animate-on-scroll" variants={fadeInUpVariants}>
                 <div className="inline-flex items-center gap-2 bg-blue-100 text-blue-700 px-3 py-1 rounded-full">
                   <Calendar className="h-4 w-4" aria-hidden="true" />
-                  <span className="text-sm font-medium">8-18 lipca 2025</span>
+                  <span className="text-sm font-medium">12-22 lipca 2026</span>
                 </div>
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl text-blue-800">O naszym obozie</h2>
                 <p className="text-gray-700">
@@ -1544,12 +1544,12 @@ export default function Home() {
             >
               <div className="bg-white text-gray-900 rounded-xl overflow-hidden shadow-2xl transform transition-transform hover:scale-105">
                 <div className="p-6 text-center">
-                  <div className="text-5xl font-bold text-blue-700">2900 zł</div>
+                  <div className="text-5xl font-bold text-blue-700">3200 zł</div>
                   <div className="mt-2 bg-blue-50 p-2 rounded-lg">
-                    <p className="text-blue-800 font-medium">Promocja: 2800 zł/os.</p>
+                    <p className="text-blue-800 font-medium">Promocja: 3100 zł/os.</p>
                     <p className="text-sm text-blue-600">przy zapisie 2 osób</p>
                   </div>
-                  <p className="mt-2 text-gray-600">Zapisy od 07.04.2025r.</p>
+                  <p className="mt-2 text-gray-600">Zapisy od 07.04.2026r.</p>
                   <div className="mt-4 text-blue-700 font-semibold">Zaliczka: 500zł</div>
                   <p className="mt-4 text-red-600 font-medium">
                     Liczba miejsc ograniczona – decyduje kolejność zgłoszeń!
@@ -1855,7 +1855,7 @@ export default function Home() {
                 />
               </button>
               <div className="text-center md:text-right">
-                <p className="text-sm text-gray-600">© 2025 WaveMakers Sports Academy. Wszystkie prawa zastrzeżone.</p>
+                <p className="text-sm text-gray-600">© 2026 WaveMakers Sports Academy. Wszystkie prawa zastrzeżone.</p>
                 <div className="mt-2 flex flex-col md:flex-row justify-center md:justify-end space-y-2 md:space-y-0 md:space-x-4">
                   <Link href="#" className="text-blue-700 hover:text-blue-900 text-sm">
                     Polityka prywatności

@@ -182,7 +182,7 @@ export default function RegistrationPath() {
                 <p className="font-medium">Gratulacje!</p>
                 <p className="text-sm">
                   Po wpłacie zaliczki, miejsce Twojego dziecka na obozie będzie zarezerwowane. Pozostałą kwotę należy
-                  wpłacić najpóźniej do 15 czerwca 2025r.
+                  wpłacić najpóźniej do 15 czerwca 2026r.
                 </p>
               </div>
             </div>

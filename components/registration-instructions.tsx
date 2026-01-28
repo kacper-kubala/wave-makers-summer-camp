@@ -21,7 +21,7 @@ export default function RegistrationInstructions({ onClose }: { onClose: () => v
   return (
     <div className="bg-white rounded-xl shadow-xl max-w-4xl mx-auto overflow-hidden">
       <div className="bg-blue-600 p-4 md:p-6 text-white">
-        <h2 className="text-xl md:text-2xl font-bold">Jak zapisać dziecko na obóz WaveMakers Summer Camp 2025</h2>
+        <h2 className="text-xl md:text-2xl font-bold">Jak zapisać dziecko na obóz WaveMakers Summer Camp 2026</h2>
         <p className="mt-2 text-sm md:text-base">Wykonaj poniższe kroki, aby zapisać swoje dziecko na nasz obóz</p>
       </div>
 
@@ -200,7 +200,7 @@ export default function RegistrationInstructions({ onClose }: { onClose: () => v
                   <p className="font-medium">Gratulacje!</p>
                   <p className="text-sm">
                     Po wpłacie zaliczki, miejsce Twojego dziecka na obozie będzie zarezerwowane. Pozostałą kwotę należy
-                    wpłacić najpóźniej do 15 czerwca 2025r.
+                    wpłacić najpóźniej do 15 czerwca 2026r.
                   </p>
                 </div>
               </div>
