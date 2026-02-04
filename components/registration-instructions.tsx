@@ -199,8 +199,7 @@ export default function RegistrationInstructions({ onClose }: { onClose: () => v
                 <div className="bg-green-50 border-l-4 border-green-400 p-4 text-green-800 text-sm md:text-base">
                   <p className="font-medium">Gratulacje!</p>
                   <p className="text-sm">
-                    Po wpłacie zaliczki, miejsce Twojego dziecka na obozie będzie zarezerwowane. Pozostałą kwotę należy
-                    wpłacić najpóźniej do 15 czerwca 2026r.
+                    Po wpłacie zaliczki, miejsce Twojego dziecka na obozie będzie zarezerwowane. 
                   </p>
                 </div>
               </div>

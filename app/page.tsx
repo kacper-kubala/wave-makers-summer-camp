@@ -733,7 +733,7 @@ export default function Home() {
 
                   <div className="flex justify-center gap-4 mt-6">
                     <Link
-                      href="https://www.facebook.com/profile.php?id=6157446677235"
+                      href="https://www.facebook.com/profile.php?id=61574466772352"
                       target="_blank"
                       className="bg-white/20 backdrop-blur-sm p-3 rounded-full hover:bg-white/30 transition-colors"
                       aria-label="Facebook WaveMakers"
@@ -1817,7 +1817,7 @@ export default function Home() {
                     <h3 className="font-bold text-lg text-blue-800 mb-4">Śledź nas w mediach społecznościowych</h3>
                     <div className="flex gap-4">
                       <Link
-                        href="https://www.facebook.com/profile.php?id=6157446677235"
+                        href="https://www.facebook.com/profile.php?id=61574466772352"
                         target="_blank"
                         className="bg-blue-100 p-4 rounded-full hover:bg-blue-200 transition-colors"
                       >
