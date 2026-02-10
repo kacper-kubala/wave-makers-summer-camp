@@ -39,7 +39,7 @@ export const metadata = {
     icon: [{ url: "/favicon.png" }],
     apple: [{ url: "/favicon.png" }],
   },
-    generator: 'v0.dev'
+  generator: 'v0.dev'
 }
 
 export default function RootLayout({
@@ -52,12 +52,12 @@ export default function RootLayout({
       <head>
         {/* Preload kluczowych zasobów */}
         <link rel="preload" href="/images/logo-white.png" as="image" />
-        <link rel="preload" href="/images/hero-background.png" as="image" />
+        <link rel="preload" href="/images/hero-background.jpg" as="image" />
         <link rel="preload" href="/images/logo-color.png" as="image" />
 
         {/* Priority Hints dla przeglądarek, które je obsługują */}
         <link rel="preload" href="/images/logo-white.png" as="image" fetchPriority="high" />
-        <link rel="preload" href="/images/hero-background.png" as="image" fetchPriority="high" />
+        <link rel="preload" href="/images/hero-background.jpg" as="image" fetchPriority="high" />
 
         {/* Favicon */}
         <link rel="icon" href="/favicon.png" />

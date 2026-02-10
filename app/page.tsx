@@ -37,6 +37,7 @@ import {
   TreePine,
   Moon,
   UserCheck,
+  PlayCircle,
 } from "lucide-react"
 
 // Importuj dynamiczne komponenty
@@ -59,6 +60,7 @@ import { fadeInUpVariants, staggerContainerVariants, loadOptimizedFeatures } fro
 // Znajdź import useIsMobile
 import { useIsMobile } from "@/hooks/use-mobile"
 import InstructorCard from "@/components/instructor-card"
+import GalleryLightbox from "@/components/gallery-lightbox"
 
 // Zastąp motion.div LazyMotion w głównym komponencie
 export default function Home() {
@@ -368,46 +370,135 @@ export default function Home() {
   // Dane galerii
   const galleryImages = [
     {
-      src: "/images/gallery/sup-group-large.png",
-      alt: "Grupa dzieci z deskami SUP przed ośrodkiem",
-      description: "Nasza flota SUP i uczestnicy gotowi do wodnych przygód!",
+      src: "/images/zdjecia2025/20250710_114013.jpg",
+      alt: "Uczestnicy obozu podczas porannych zajęć",
+      description: "Poranne zajęcia pełne energii i uśmiechów!",
     },
     {
-      src: "/images/gallery/graduation-ceremony.png",
-      alt: "Zakończenie obozu i wręczenie dyplomów",
-      description: "Uroczyste zakończenie obozu - każdy uczestnik otrzymuje certyfikat ukończenia",
+      src: "/images/zdjecia2025/20250710_114336.jpg",
+      alt: "Aktywności sportowe na terenie ośrodka",
+      description: "Aktywny wypoczynek w otoczeniu pięknej natury",
     },
     {
-      src: "/images/gallery/rope-park.png",
-      alt: "Dzieci w parku linowym",
-      description: "Przygoda w parku linowym - test odwagi i sprawności fizycznej",
+      src: "/images/zdjecia2025/20250710_171220.jpg",
+      alt: "Popołudniowe atrakcje na obozie",
+      description: "Popołudniowe przygody – każdy dzień przynosi nowe wyzwania!",
     },
     {
-      src: "/images/gallery/climbing-instruction.png",
-      alt: "Instruktaż przed wspinaczką",
-      description: "Bezpieczeństwo przede wszystkim - profesjonalny instruktaż przed zajęciach wspinaczkowych",
+      src: "/images/zdjecia2025/20250711_122202.jpg",
+      alt: "Zajęcia grupowe na obozie letnim",
+      description: "Wspólna zabawa i integracja – przyjaźnie na całe życie",
     },
     {
-      src: "/images/gallery/sunset-kayaking.png",
-      alt: "Zajęcia z kajaków i SUP podczas pięknego zachodu słońca",
-      description: "Wieczorne zajęcia wodne w promieniach zachodzącego słońca",
+      src: "/images/zdjecia2025/20250712_102555.jpg",
+      alt: "Poranne zajęcia sportowe",
+      description: "Trening pod okiem doświadczonych instruktorów",
     },
     {
-      src: "/images/gallery/swimming-group.png",
-      alt: "Grupa dzieci podczas zajęć pływackich",
-      description: "Wspólna zabawa podczas zajęć pływackich pod okiem instruktorów",
+      src: "/images/zdjecia2025/20250712_200432.jpg",
+      alt: "Wieczorne atrakcje na obozie",
+      description: "Wieczorna integracja – niezapomniane chwile przy zachodzie słońca",
     },
     {
-      src: "/images/gallery/water-slide.png",
-      alt: "Dzieci bawiące się na zjeżdżalni wodnej",
-      description: "Letnia zabawa na zjeżdżalni wodnej - jedna z ulubionych atrakcji",
+      src: "/images/zdjecia2025/20250712_201213.jpg",
+      alt: "Zabawa wieczorna uczestników obozu",
+      description: "Wieczory pełne śmiechu i wspólnej zabawy",
     },
     {
-      src: "/images/gallery/graduation-ceremony-2.png",
-      alt: "Uczestnicy z dyplomami na pomoście",
-      description: "Dumni uczestnicy prezentują swoje dyplomy na tle malowniczego jeziora",
+      src: "/images/zdjecia2025/20250713_153328.jpg",
+      alt: "Aktywności na świeżym powietrzu",
+      description: "Przygody na łonie natury – sport i rekreacja w jednym",
+    },
+    {
+      src: "/images/zdjecia2025/20250713_162531.jpg",
+      alt: "Zajęcia popołudniowe na obozie",
+      description: "Popołudniowe wyzwania sportowe na terenie ośrodka",
+    },
+    {
+      src: "/images/zdjecia2025/20250713_165959.jpg",
+      alt: "Uczestnicy podczas zajęć rekreacyjnych",
+      description: "Radość i energia – tak wygląda każdy dzień na obozie!",
+    },
+    {
+      src: "/images/zdjecia2025/20250713_170013.jpg",
+      alt: "Grupowe zdjęcie uczestników obozu",
+      description: "Nasza ekipa w komplecie – wspólnie tworzymy niezapomniane wakacje",
+    },
+    {
+      src: "/images/zdjecia2025/20250714_105815.jpg",
+      alt: "Poranne aktywności na obozie",
+      description: "Każdy poranek zaczynamy od dawki pozytywnej energii!",
+    },
+    {
+      src: "/images/zdjecia2025/20250714_172507.jpg",
+      alt: "Popołudniowe zajęcia sportowe",
+      description: "Sport i zabawa na najwyższym poziomie",
+    },
+    {
+      src: "/images/zdjecia2025/20250714_192850.jpg",
+      alt: "Wieczorne zajęcia integracyjne",
+      description: "Wieczorna integracja przy ognisku i wspólnych grach",
+    },
+    {
+      src: "/images/zdjecia2025/20250715_103212.jpg",
+      alt: "Zajęcia wodne na obozie",
+      description: "Wodne przygody – nasza ulubiona część dnia!",
+    },
+    {
+      src: "/images/zdjecia2025/20250716_220720.jpg",
+      alt: "Nocne atrakcje na obozie",
+      description: "Wieczorne gry i zabawy pod gwiazdami",
+    },
+    {
+      src: "/images/zdjecia2025/20250717_102831.jpg",
+      alt: "Poranne treningi na obozie",
+      description: "Treningi, które rozwijają umiejętności i budują pewność siebie",
+    },
+    {
+      src: "/images/zdjecia2025/20250717_105848.jpg",
+      alt: "Zajęcia sportowe na obozie",
+      description: "Doskonalenie techniki pod czujnym okiem trenerów",
+    },
+    {
+      src: "/images/zdjecia2025/20250717_114601.jpg",
+      alt: "Aktywności rekreacyjne na obozie",
+      description: "Chwila relaksu między treningami",
+    },
+    {
+      src: "/images/zdjecia2025/20250717_190630.jpg",
+      alt: "Wieczorne zajęcia na obozie",
+      description: "Wieczorne przygody w otoczeniu kaszubskiej przyrody",
+    },
+    {
+      src: "/images/zdjecia2025/20250718_101902.jpg",
+      alt: "Ostatni dzień obozu",
+      description: "Wspomnienia, które zostaną z nami na zawsze!",
+    },
+    {
+      src: "/images/zdjecia2025/IMG-20250709-WA0002.jpg",
+      alt: "Przyjazd uczestników na obóz",
+      description: "Początek niezapomnianych wakacji – witamy na obozie!",
+    },
+    {
+      src: "/images/zdjecia2025/IMG-20250715-WA0098.jpg",
+      alt: "Uczestnicy podczas aktywności obozowych",
+      description: "Tyle radości w jednym miejscu – to jest WaveMakers!",
+    },
+    {
+      src: "/images/zdjecia2025/IMG-20250715-WA0156.jpg",
+      alt: "Zabawa na obozie letnim",
+      description: "Najlepsze wakacje? Tylko z WaveMakers Summer Camp!",
     },
   ]
+
+  // Lightbox state
+  const [lightboxOpen, setLightboxOpen] = useState(false)
+  const [lightboxIndex, setLightboxIndex] = useState(0)
+
+  const openLightbox = (index: number) => {
+    setLightboxIndex(index)
+    setLightboxOpen(true)
+  }
 
   const scrollToSection = (ref: React.RefObject<HTMLElement>) => {
     if (ref.current) {
@@ -637,7 +728,7 @@ export default function Home() {
 
           <div className="relative h-full w-full">
             <Image
-              src="/images/hero-background.png"
+              src="/images/hero-background.jpg"
               alt="WaveMakers Summer Camp - tło"
               fill
               className="object-cover"
@@ -1279,12 +1370,66 @@ export default function Home() {
             </motion.div>
           </div>
         </section>
-        <section className="py-16 bg-blue-50 relative overflow-hidden">
+
+        {/* Video Section - Film z obozu */}
+        <section className="py-16 bg-gradient-to-b from-blue-600 to-blue-800 relative overflow-hidden">
           <div
             className="absolute top-0 left-0 w-full h-20 bg-white"
             style={{ clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 0)" }}
           ></div>
 
+          <div className="container px-4 md:px-6 relative z-10">
+            <motion.div
+              className="text-center mb-8 animate-on-scroll"
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, margin: "-100px" }}
+              variants={fadeInUpVariants}
+            >
+              <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm text-white px-3 py-1 rounded-full mb-4">
+                <PlayCircle className="h-4 w-4" aria-hidden="true" />
+                <span className="text-sm font-medium">Film</span>
+              </div>
+              <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl text-white">
+                Zobacz nas w akcji!
+              </h2>
+              <p className="text-blue-100 mt-2 max-w-2xl mx-auto">
+                Obejrzyj relację z poprzedniego obozu i przekonaj się, ile radości i przygód czeka na uczestników!
+              </p>
+            </motion.div>
+
+            <motion.div
+              className="max-w-4xl mx-auto animate-on-scroll"
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, margin: "-100px" }}
+              variants={fadeInUpVariants}
+            >
+              <div className="relative rounded-xl overflow-hidden shadow-2xl bg-black">
+                <div className="relative w-full" style={{ paddingBottom: "56.25%" }}>
+                  <iframe
+                    className="absolute top-0 left-0 w-full h-full"
+                    src="https://www.youtube.com/embed/ykqZVkxTvtU?rel=0"
+                    title="WaveMakers Summer Camp - relacja z obozu"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                    loading="lazy"
+                  ></iframe>
+                </div>
+              </div>
+              <p className="text-center text-blue-200 mt-4 text-sm">
+                🎬 Relacja z obozu WaveMakers Summer Camp
+              </p>
+            </motion.div>
+          </div>
+
+          <div
+            className="absolute bottom-0 left-0 w-full h-20 bg-blue-50"
+            style={{ clipPath: "polygon(0 100%, 100% 0, 100% 100%, 0 100%)" }}
+          ></div>
+        </section>
+
+        <section className="py-16 bg-blue-50 relative overflow-hidden">
           <div className="container px-4 md:px-6 relative z-10">
             <motion.div
               className="text-center mb-12 animate-on-scroll"
@@ -1317,17 +1462,29 @@ export default function Home() {
                   {galleryImages.map((image, index) => (
                     <CarouselItem key={index}>
                       <div className="p-1">
-                        <div className="relative h-[300px] sm:h-[500px] rounded-xl overflow-hidden">
+                        <div
+                          className="relative aspect-[4/3] max-h-[70vh] rounded-xl overflow-hidden cursor-pointer group"
+                          onClick={() => openLightbox(index)}
+                          role="button"
+                          tabIndex={0}
+                          onKeyDown={(e) => e.key === 'Enter' && openLightbox(index)}
+                          aria-label={`Otwórz zdjęcie: ${image.alt}`}
+                        >
                           <Image
                             src={image.src || "/placeholder.svg"}
                             alt={image.alt}
                             fill
-                            className="object-cover"
+                            className="object-cover object-top group-hover:scale-105 transition-transform duration-500"
                             loading="lazy"
                             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                           />
                           <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end">
                             <p className="p-4 text-white text-lg font-medium">{image.description}</p>
+                          </div>
+                          <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300 flex items-center justify-center">
+                            <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-white/20 backdrop-blur-sm rounded-full p-3">
+                              <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7" /></svg>
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -1341,13 +1498,21 @@ export default function Home() {
               </Carousel>
 
               <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2 mt-6">
-                {galleryImages.slice(0, 4).map((image, index) => (
-                  <div key={`thumb-${index}`} className="relative aspect-video rounded-md overflow-hidden">
+                {galleryImages.slice(0, 8).map((image, index) => (
+                  <div
+                    key={`thumb-${index}`}
+                    className="relative aspect-video rounded-md overflow-hidden cursor-pointer group"
+                    onClick={() => openLightbox(index)}
+                    role="button"
+                    tabIndex={0}
+                    onKeyDown={(e) => e.key === 'Enter' && openLightbox(index)}
+                    aria-label={`Otwórz zdjęcie: ${image.alt}`}
+                  >
                     <Image
                       src={image.src || "/placeholder.svg"}
                       alt={`Miniatura ${index + 1}`}
                       fill
-                      className="object-cover hover:scale-110 transition-transform duration-300"
+                      className="object-cover object-top hover:scale-110 transition-transform duration-300"
                       loading="lazy"
                       sizes="(max-width: 768px) 50vw, (max-width: 1200px) 25vw, 20vw"
                     />
@@ -1397,6 +1562,14 @@ export default function Home() {
                 </div>
               </motion.div>
             </motion.div>
+
+            <GalleryLightbox
+              images={galleryImages}
+              currentIndex={lightboxIndex}
+              isOpen={lightboxOpen}
+              onClose={() => setLightboxOpen(false)}
+              onNavigate={setLightboxIndex}
+            />
           </div>
 
           <div
@@ -1549,7 +1722,7 @@ export default function Home() {
                     <p className="text-blue-800 font-medium">Promocja: 3100 zł/os.</p>
                     <p className="text-sm text-blue-600">przy zapisie 2 osób</p>
                   </div>
-                  <p className="mt-2 text-gray-600">Zapisy od 07.04.2026r.</p>
+                  <p className="mt-2 text-gray-600">Zapisy od 14.02.2026r.</p>
                   <div className="mt-4 text-blue-700 font-semibold">Zaliczka: 500zł</div>
                   <p className="mt-4 text-red-600 font-medium">
                     Liczba miejsc ograniczona – decyduje kolejność zgłoszeń!

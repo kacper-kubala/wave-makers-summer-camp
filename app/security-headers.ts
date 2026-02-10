@@ -10,7 +10,7 @@ export function getSecurityHeaders() {
         img-src 'self' data: blob: https:;
         font-src 'self';
         connect-src 'self' https://*.vercel.app;
-        frame-src 'self';
+        frame-src 'self' https://www.youtube.com;
         object-src 'none';
         base-uri 'self';
         form-action 'self';
